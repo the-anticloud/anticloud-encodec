@@ -1,0 +1,10 @@
+{
+  "project": "ENCODEC",
+  "category": "AUDIO_CONSUMER",
+  "path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\AUDIO_CONSUMER\\ENCODEC",
+  "status": "failed",
+  "reason": "unreadable BENCH.json: 'metrics'",
+  "files_count": null,
+  "lines_of_code": null,
+  "sha": null
+}
