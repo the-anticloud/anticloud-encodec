@@ -1,0 +1,216 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "ENCODEC",
+  "source": {
+    "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\AUDIO_CONSUMER\\ENCODEC\\UPSTREAM_CLONE",
+    "git": {
+      "head": "0e2d0aed29362c8e8f52494baf3e6f99056b214f",
+      "url": "https://github.com/facebookresearch/encodec",
+      "branch": "main",
+      "committed_at": "2023-06-20T17:15:57+02:00"
+    }
+  },
+  "metrics": {
+    "files_total": 41,
+    "source_files_scanned": 21,
+    "lines_of_code": 2969,
+    "languages": {
+      ".py": 21,
+      ".md": 6,
+      "(none)": 3,
+      ".yml": 3,
+      ".png": 2,
+      ".wav": 2,
+      ".in": 1,
+      ".ini": 1,
+      ".cfg": 1,
+      ".typed": 1
+    }
+  },
+  "licence": {
+    "spdx": "MIT",
+    "class": "A",
+    "source_file": "LICENSE",
+    "redistribution_allowed": true
+  },
+  "dependencies": {
+    "count": 1,
+    "unique": 1,
+    "by_ecosystem": {
+      "pypi": 1
+    },
+    "list": [
+      {
+        "ecosystem": "pypi",
+        "name": "encodec",
+        "version": "=encodec.__main__:main",
+        "source_file": "setup.py",
+        "raw": "encodec=encodec.__main__:main"
+      }
+    ]
+  },
+  "owasp_top10": {
+    "total_findings": 2,
+    "files_with_findings": 2,
+    "severity": {
+      "high": 2,
+      "medium": 0,
+      "low": 0
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A03-Injection": {
+        "count": 2,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "setup.py",
+            "line": 25,
+            "cwe": "CWE-95",
+            "snippet": "exec(line, context)"
+          },
+          {
+            "severity": "high",
+            "file": "encodec/model.py",
+            "line": 217,
+            "cwe": "CWE-95",
+            "snippet": "lm.eval()"
+          }
+        ]
+      },
+      "A04-InsecureDesign": {
+        "count": 0,
+        "findings": []
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 0,
+        "findings": []
+      },
+      "A06-VulnerableComponents": {
+        "count": 0,
+        "findings": []
+      },
+      "A07-AuthFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 0,
+        "findings": []
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 0,
+    "files_with_findings": 0,
+    "severity": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM04-DataPoisoning": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM09-Misinformation": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:e17f9f36-7089-5031-a5ec-02f804c28602",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-05T14:49:55Z",
+      "component": {
+        "type": "application",
+        "name": "ENCODEC",
+        "version": "0e2d0aed2936",
+        "bom-ref": "pkg:generic/anticloud/ENCODEC@0e2d0aed2936",
+        "purl": "pkg:generic/anticloud/ENCODEC@0e2d0aed2936",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": "0e2d0aed29362c8e8f52494baf3e6f99056b214f"
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/facebookresearch/encodec"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": [
+      {
+        "type": "library",
+        "name": "encodec",
+        "version": "=encodec.__main__:main",
+        "purl": "pkg:pypi/encodec@encodec.__main__:main",
+        "bom-ref": "pypi/encodec@=encodec.__main__:main"
+      }
+    ]
+  },
+  "elapsed_seconds": 15.11
+}

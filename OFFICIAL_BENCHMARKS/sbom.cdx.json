@@ -1,0 +1,46 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:e17f9f36-7089-5031-a5ec-02f804c28602",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-06T07:56:09Z",
+    "component": {
+      "type": "application",
+      "name": "ENCODEC",
+      "version": "0e2d0aed2936",
+      "bom-ref": "pkg:generic/anticloud/ENCODEC@0e2d0aed2936",
+      "purl": "pkg:generic/anticloud/ENCODEC@0e2d0aed2936",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "0e2d0aed29362c8e8f52494baf3e6f99056b214f"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/facebookresearch/encodec"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "encodec",
+      "version": "=encodec.__main__:main",
+      "purl": "pkg:pypi/encodec@encodec.__main__:main",
+      "bom-ref": "pypi/encodec@=encodec.__main__:main"
+    }
+  ]
+}
